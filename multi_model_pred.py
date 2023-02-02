@@ -21,10 +21,11 @@ with st.sidebar:
 if (selected == "UMIT CAN INOZU"):
     with st.container():
         st.subheader("Merhabalar , Ben Ümit Can İNÖZÜ")
-        st.write("Ankara Üniversitesi İstatistik bölümü 3.sınıf öğrencisiyim. Okulda öğrendiğim teorik istatistik bilgisi ve kendi başıma öğrendiğim yazılım bilgimi birleştirerek kendimi Veri Bilimi alanında projeler yaparak geliştiriyorum.")
-        st.write("[LınkedIn >](linkedin.com/in/ümit-can-inözü/)")
-        st.write("[Kaggle >]( kaggle.com/umitcaninz)")
-        st.write("[GıtHub >](github.com/umitcaninz/)")
+        st.markdown("Ankara Üniversitesi İstatistik bölümü 3.sınıf öğrencisiyim. Okulda öğrendiğim teorik istatistik bilgisi ve kendi başıma öğrendiğim yazılım bilgimi birleştirerek kendimi Veri Bilimi alanında projeler yaparak geliştiriyorum.")
+        st.markdown("[LınkedIn >](linkedin.com/in/ümit-can-inözü/)")
+        st.markdown("[Kaggle >]( kaggle.com/umitcaninz)")
+        st.markdown("[GıtHub >](github.com/umitcaninz/)")
+
 
 
 
