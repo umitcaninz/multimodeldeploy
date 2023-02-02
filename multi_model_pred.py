@@ -10,13 +10,25 @@ stroke_model = pickle.load(open("stroke_model.sav","rb"))
 with st.sidebar:
 
     selected = option_menu("Makine Öğrenmesi Kullanarak Hastalık Tahmin Etme",
-                           ["Diyabet Tahmini",
+                           ["UMIT CAN INOZU","Diyabet Tahmini",
                             ],
-                           icons= ["activity"],
+                           icons= ["person","activity"],
                            default_index=0)
 
 
 #Diyabet tahmin sayfası
+
+if (selected == "UMIT CAN INOZU"):
+    with st.container():
+        st.subheader("Merhabalar , Ben Ümit Can İNÖZÜ")
+        st.write("Ankara Üniversitesi İstatistik bölümü 3.sınıf öğrencisiyim. Okulda öğrendiğim teorik istatistik bilgisi ve kendi başıma öğrendiğim yazılım bilgimi birleştirerek kendimi Veri Bilimi alanında projeler yaparak geliştiriyorum.")
+        st.write("[LınkedIn >](linkedin.com/in/ümit-can-inözü/)")
+        st.write("[Kaggle >]( kaggle.com/umitcaninz)")
+        st.write("[GıtHub >](github.com/umitcaninz/)")
+
+
+
+
 
 if (selected == "Diyabet Tahmini"):
 
