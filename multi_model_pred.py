@@ -3,6 +3,7 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import requests
 from streamlit_lottie import st_lottie
+from PIL import Image
 
 
 
@@ -13,7 +14,7 @@ stroke_model = pickle.load(open("stroke_model.sav","rb"))
 
 with st.sidebar:
 
-    selected = option_menu("Makine Öğrenmesi Kullanarak Hastalık Tahmin Etme",
+    selected = option_menu("Makine Öğrenmesi Model Deployment",
                            ["UMIT CAN INOZU","Diyabet Tahmini",
                             ],
                            icons= ["person","activity"],
@@ -27,11 +28,29 @@ with st.sidebar:
 
 if (selected == "UMIT CAN INOZU"):
     with st.container():
-        st.subheader("Merhabalar , Ben Ümit Can İNÖZÜ")
+
+        col1,col2,col3 = st.columns(3)
+
+        with col2 :
+            img_contact_form = st.image("images/umitcaninz.png")
+
+
+        st.subheader("Merhabalar , Ben Ümit Can İNÖZÜ :wave:")
         st.markdown("Ankara Üniversitesi İstatistik bölümü 3.sınıf öğrencisiyim. Okulda öğrendiğim teorik istatistik bilgisi ve kendi başıma öğrendiğim yazılım bilgimi birleştirerek kendimi Veri Bilimi alanında projeler yaparak geliştiriyorum.")
-        st.markdown("[LinkedIn >](https://www.linkedin.com/in/ümit-can-inözü/)")
-        st.markdown("[Kaggle >](https://www.kaggle.com/umitcaninz)")
-        st.markdown("[GıtHub >](https://github.com/umitcaninz)")
+
+        col1 , col2 , col3 = st.columns(3)
+
+        with col1:
+            st.markdown(
+                "[![LinkedIn>](https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg)](https://www.linkedin.com/in/ümit-can-inözü/)")
+
+        with col2:
+            st.markdown("[![Kaggle >](https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-47.png)](https://www.kaggle.com/umitcaninz)")
+        with col3:
+            st.markdown("[![GitHub >](https://img.icons8.com/material-outlined/48/000000/github.png)](https://github.com/umitcaninz)")
+
+
+
 
     def local_css(file_name):
         with open(file_name) as f:
@@ -47,7 +66,7 @@ if (selected == "UMIT CAN INOZU"):
             <input type="text" name="name" placeholder = "İsminizi giriniz." required>
             <input type="email" name="email" placeholder = "Emailinizi giriniz." required>
             <textarea name="message" placeholder = "Mesajınızı yazınız." required></textarea>
-            <button type="submit">Send</button>
+            <button type="submit">Gönder</button>
         </form>
         """
         left_column , right_column = st.columns(2)
