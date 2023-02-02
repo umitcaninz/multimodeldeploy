@@ -20,7 +20,7 @@ with st.sidebar:
                            icons= ["person","activity"],
                            default_index=0)
 
-#
+
 
 
 
@@ -48,7 +48,7 @@ if (selected == "UMIT CAN INOZU"):
             st.markdown("[![Kaggle >](https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/189_Kaggle_logo_logos-47.png)](https://www.kaggle.com/umitcaninz)")
         with col3:
             st.markdown("[![GitHub >](https://img.icons8.com/material-outlined/48/000000/github.png)](https://github.com/umitcaninz)")
-
+##
 
 
 
@@ -59,7 +59,7 @@ if (selected == "UMIT CAN INOZU"):
     local_css("style/style.css")
 
     with st.container():
-        st.header("Bana Ulaşmak İçin :")
+        st.subheader("Bana Ulaşmak İçin :")
 
         contact_form = """
         <form action="https://formsubmit.co/umitcaninozu@gmail.com" method="POST">
