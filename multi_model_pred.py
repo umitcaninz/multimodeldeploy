@@ -1,6 +1,10 @@
 import pickle
 import streamlit as st
 from streamlit_option_menu import option_menu
+import requests
+from streamlit_lottie import st_lottie
+
+
 
 diabetes_model = pickle.load(open("diabetes_model.sav","rb"))
 
@@ -16,15 +20,43 @@ with st.sidebar:
                            default_index=0)
 
 
+
+
+
 #Diyabet tahmin sayfası
 
 if (selected == "UMIT CAN INOZU"):
     with st.container():
         st.subheader("Merhabalar , Ben Ümit Can İNÖZÜ")
         st.markdown("Ankara Üniversitesi İstatistik bölümü 3.sınıf öğrencisiyim. Okulda öğrendiğim teorik istatistik bilgisi ve kendi başıma öğrendiğim yazılım bilgimi birleştirerek kendimi Veri Bilimi alanında projeler yaparak geliştiriyorum.")
-        st.markdown("[LınkedIn >](linkedin.com/in/ümit-can-inözü/)")
-        st.markdown("[Kaggle >]( kaggle.com/umitcaninz)")
-        st.markdown("[GıtHub >](github.com/umitcaninz/)")
+        st.markdown("[LinkedIn >](https://www.linkedin.com/in/ümit-can-inözü/)")
+        st.markdown("[Kaggle >](https://www.kaggle.com/umitcaninz)")
+        st.markdown("[GıtHub >](https://github.com/umitcaninz)")
+
+    def local_css(file_name):
+        with open(file_name) as f:
+            st.markdown(f"<style>{f.read()}</style>",unsafe_allow_html = True)
+
+    local_css("style/style.css")
+
+    with st.container():
+        st.header("Bana Ulaşmak İçin :")
+
+        contact_form = """
+        <form action="https://formsubmit.co/umitcaninozu@gmail.com" method="POST">
+            <input type="text" name="name" placeholder = "İsminizi giriniz." required>
+            <input type="email" name="email" placeholder = "Emailinizi giriniz." required>
+            <textarea name="message" placeholder = "Mesajınızı yazınız." required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        """
+        left_column , right_column = st.columns(2)
+        with left_column:
+            st.markdown(contact_form,unsafe_allow_html=True)
+        with right_column:
+            st.empty()
+
+
 
 
 
