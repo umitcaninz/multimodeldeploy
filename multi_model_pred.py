@@ -13,8 +13,8 @@ stroke_model = pickle.load(open("stroke_model.sav","rb"))
 
 with st.sidebar:
 
-    selected = option_menu("Makine Öğrenmesi Model Deployment",
-                           ["UMIT CAN INOZU","Diyabet Tahmini",
+    selected = option_menu("Machine Learning Model Deployment",
+                           ["UMIT CAN INOZU","Diabetes Prediction",
                             ],
                            icons= ["person","activity"],
                            default_index=0)
@@ -58,7 +58,7 @@ if (selected == "UMIT CAN INOZU"):
     local_css("style/style.css")
 
     with st.container():
-        st.subheader("Bana Ulaşmak İçin :")
+        st.subheader("Connect with me: :")
 
         contact_form = """
         <form action="https://formsubmit.co/umitcaninozu@gmail.com" method="POST">
@@ -81,9 +81,9 @@ if (selected == "UMIT CAN INOZU"):
 
 
 
-if (selected == "Diyabet Tahmini"):
+if (selected == "Diabetes Prediction"):
 
-    st.title("Makine Öğrenmesi Diyabet Tahmini")
+    st.title("Machine Learning Diabetes Prediction")
 
     col1 , col2 , col3 = st.columns(3)
     with col1:
@@ -107,7 +107,7 @@ if (selected == "Diyabet Tahmini"):
     diab_dignosis = ""
 
 
-    if st.button("Diyabet Test Sonuçları"):
+    if st.button("Diyabet Prediction Results"):
         diab_prediction = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
 
         if (diab_prediction[0]==1):
