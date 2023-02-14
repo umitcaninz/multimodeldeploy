@@ -35,7 +35,7 @@ if (selected == "UMIT CAN INOZU"):
 
 
         st.subheader("Merhabalar , Ben Ümit Can İNÖZÜ :wave:")
-        st.markdown("Ankara Üniversitesi İstatistik bölümü 3.sınıf öğrencisiyim. Okulda öğrendiğim teorik istatistik bilgisi ve kendi başıma öğrendiğim yazılım bilgimi birleştirerek kendimi Veri Bilimi alanında projeler yaparak geliştiriyorum.")
+        st.markdown("I am a 3rd year student at Ankara University, Department of Statistics. I develop myself by doing projects in the field of Data Science by combining the theoretical statistics knowledge I learned at school and the software knowledge I learned on my own.")
 
         col1 , col2 , col3 = st.columns(3)
 
