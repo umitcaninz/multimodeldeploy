@@ -34,7 +34,7 @@ if (selected == "UMIT CAN INOZU"):
             img_contact_form = st.image("images/umitcaninz.png")
 
 
-        st.subheader("Merhabalar , Ben Ümit Can İNÖZÜ :wave:")
+        st.subheader("Hi , I am Ümit Can İNÖZÜ :wave:")
         st.markdown("I am a 3rd year student at Ankara University, Department of Statistics. I develop myself by doing projects in the field of Data Science by combining the theoretical statistics knowledge I learned at school and the software knowledge I learned on my own.")
 
         col1 , col2 , col3 = st.columns(3)
