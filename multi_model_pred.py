@@ -62,10 +62,10 @@ if (selected == "UMIT CAN INOZU"):
 
         contact_form = """
         <form action="https://formsubmit.co/umitcaninozu@gmail.com" method="POST">
-            <input type="text" name="name" placeholder = "İsminizi giriniz." required>
-            <input type="email" name="email" placeholder = "Emailinizi giriniz." required>
-            <textarea name="message" placeholder = "Mesajınızı yazınız." required></textarea>
-            <button type="submit">Gönder</button>
+            <input type="text" name="name" placeholder = "Name" required>
+            <input type="email" name="email" placeholder = "Email" required>
+            <textarea name="message" placeholder = "Text Message" required></textarea>
+            <button type="submit">Send</button>
         </form>
         """
         left_column , right_column = st.columns(2)
