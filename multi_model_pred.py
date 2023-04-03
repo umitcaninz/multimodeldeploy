@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 import requests
 from PIL import Image
 
-
+st.set_page_config(page_title="diabetes")
 
 diabetes_model = pickle.load(open("diabetes_model.sav","rb"))
 
