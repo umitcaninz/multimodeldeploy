@@ -25,7 +25,7 @@ with st.sidebar:
 
 #Diyabet tahmin sayfası
 
-if (selected == "UMIT CAN INOZU"):
+if (selected == "ÜMİT CAN İNÖZÜ"):
     with st.container():
 
         col1,col2,col3 = st.columns(3)
@@ -81,9 +81,9 @@ if (selected == "UMIT CAN INOZU"):
 
 
 
-if (selected == "Diabetes Prediction"):
+if (selected == "DIABETES PREDICTION"):
 
-    st.title("Machine Learning Diabetes Prediction")
+    st.title(" Diabetes Prediction with Machine Learning")
 
     col1 , col2 , col3 = st.columns(3)
     with col1:
@@ -107,7 +107,7 @@ if (selected == "Diabetes Prediction"):
     diab_dignosis = ""
 
 
-    if st.button("Diyabet Prediction Results"):
+    if st.button("Diabetes Prediction Results"):
         diab_prediction = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
 
         if (diab_prediction[0]==1):
