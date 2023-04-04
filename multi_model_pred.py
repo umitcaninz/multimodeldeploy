@@ -4,7 +4,7 @@ from streamlit_option_menu import option_menu
 import requests
 from PIL import Image
 import requests
-import json
+
 
 st.set_page_config(page_title="diabetes")
 
@@ -118,19 +118,5 @@ if (selected == "DIABETES PREDICTION"):
         else:
             diab_dignosis = "Diyabet Hastası değilsiniz"
 
-        result_dict = {"prediction_result": diab_dignosis}
-        json_result = json.dumps(result_dict)
 
-    st.success(json_result)
-
-
-
-
-
-
-
-
-
-
-
-
+    st.success(diab_dignosis)
