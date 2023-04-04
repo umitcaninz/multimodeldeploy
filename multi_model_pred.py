@@ -3,8 +3,6 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import requests
 from PIL import Image
-import requests
-
 
 st.set_page_config(page_title="diabetes")
 
@@ -108,22 +106,29 @@ if (selected == "DIABETES PREDICTION"):
 
     diab_dignosis = ""
 
-    import json
 
     if st.button("Diabetes Prediction Results"):
-        diab_prediction = diabetes_model.predict(
-            [[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
+        diab_prediction = diabetes_model.predict([[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
 
-        if diab_prediction[0] == 1:
-            diab_diagnosis = "Diyabet Hastasısınız"
+        if (diab_prediction[0]==1):
+            diab_dignosis = "Diyabet Hastasısınız"
+
         else:
-            diab_diagnosis = "Diyabet Hastası değilsiniz"
+            diab_dignosis = "Diyabet Hastası değilsiniz"
 
-        st.success(diab_diagnosis)
 
-        try:
-            with open("diagnosis.json", "w") as f:
-                json.dump({"diagnosis": diab_diagnosis}, f)
-            print("diagnosis.json dosyasına yazıldı!")
-        except Exception as e:
-            print("diagnosis.json dosyasına yazılırken bir hata oluştu:", e)
+    st.success(diab_dignosis)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
