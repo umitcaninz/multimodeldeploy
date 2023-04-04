@@ -119,6 +119,11 @@ if (selected == "DIABETES PREDICTION"):
         else:
             diab_diagnosis = "Diyabet Hastası değilsiniz"
 
-        with open("diagnosis.json", "w") as f:
-            json.dump({"diagnosis": diab_diagnosis}, f)
-            st.success(diab_diagnosis + " ve sonuçlar diagnosis.json dosyasına kaydedildi.")
+        st.success(diab_diagnosis)
+
+        try:
+            with open("diagnosis.json", "w") as f:
+                json.dump({"diagnosis": diab_diagnosis}, f)
+            print("diagnosis.json dosyasına yazıldı!")
+        except Exception as e:
+            print("diagnosis.json dosyasına yazılırken bir hata oluştu:", e)
