@@ -108,18 +108,17 @@ if (selected == "DIABETES PREDICTION"):
 
     diab_dignosis = ""
 
+    import json
+
     if st.button("Diabetes Prediction Results"):
         diab_prediction = diabetes_model.predict(
             [[Pregnancies, Glucose, BloodPressure, SkinThickness, Insulin, BMI, DiabetesPedigreeFunction, Age]])
 
-        if (diab_prediction[0] == 1):
-            diab_dignosis = "Diyabet Hastasısınız"
-
+        if diab_prediction[0] == 1:
+            diab_diagnosis = "Diyabet Hastasısınız"
         else:
-            diab_dignosis = "Diyabet Hastası değilsiniz"
+            diab_diagnosis = "Diyabet Hastası değilsiniz"
 
-        # diab_dignosis değişkeninin içeriğini JSON dosyasına yazın
-        with open("diabetes_prediction.json", "w") as f:
-            json.dump({"diagnosis": diab_dignosis}, f)
-
-    st.success(diab_dignosis)
+        with open("diagnosis.json", "w") as f:
+            json.dump({"diagnosis": diab_diagnosis}, f)
+            st.success(diab_diagnosis + " ve sonuçlar diagnosis.json dosyasına kaydedildi.")
