@@ -14,7 +14,7 @@ stroke_model = pickle.load(open("stroke_model.sav","rb"))
 with st.sidebar:
 
     selected = option_menu("MACHINE LEARNING MODEL DEPLOYMENT",
-                           ["ÜMİT CAN İNÖZÜ","DIABETES PREDICTION","TITANIC PREDICTON"
+                           ["ÜMİT CAN İNÖZÜ","DIABETES PREDICTION"
                             ],
                            icons= ["person","activity"],
                            default_index=0)
